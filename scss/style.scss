@@ -141,6 +141,15 @@ main {
 #textForm {
 	max-width: 450px;
 }
+#errorIcon {
+	position: absolute;
+	top: 20%;
+	right: 30%;
+}
+#errorText {
+	text-align: left;
+}
+
 //=====================Footer================//
 .footer {
 	padding: 0.5rem;
@@ -186,7 +195,12 @@ main {
 	#textContent {
 		background-image: url(../images/bg-pattern-desktop.svg);
 		background-size: cover;
-		
+	}
+	#errorIcon {
+		position: absolute;
+		right: 20%;
+		top: 35%;
+		transform: translate(0, -50%);
 	}
 }
 //=====================Media================//

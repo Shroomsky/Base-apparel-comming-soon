@@ -20,7 +20,7 @@
     <div class=" d-flex flex-column flex-xl-row container-fluid justyfy-content-center " id="mainContainer">
       <div class="container-fluid p-0 col-xl-7 flex-xl-column text-xl-start" id="textContent">
         <header class="ps-xl-5">
-          <img src="./images/logo.svg" alt="Base Apperel company logo" class="ps-4 pt-4 pb-4 ms-xl-0 mt-xl-3 pb-xl-5" >
+          <img src="./images/logo.svg" alt="Base Apperel company logo" class="ps-4 pt-4 pb-4 ms-xl-0 mt-xl-3 pb-xl-5">
           <div class="img container-fluid d-xl-none">
             <img src="./images/hero-mobile.jpg" alt="Base Apperel model photo">
           </div>
@@ -30,11 +30,15 @@
           <p class="pb-4 pt-3">Hello fellow shoppers! We're currently building our new fashion store.
             Add your email below to stay up-to-date with announcements and our launch deals.</p>
           <form class="form-floating mb-3">
+
             <input type="email" class="form-control rounded-pill bg-transparent" id="floatingInput"
               placeholder="Email Address">
             <label for="floatingInput">Email Address</label>
+            <!-- error icon -->
+            <img src="./images/icon-error.svg" alt="" class="d-none" id="errorIcon">
             <button class="rounded-pill" id="btn"><img src="./images/icon-arrow.svg" alt=""></button>
-            <p class="text-danger ms-4 mt-2 d-none" id="#errorText">Please provide a valid email</p>
+            <!-- error message -->
+            <p class="text-danger ms-4 mt-2 d-none" id="errorText">Please provide a valid email</p>
           </form>
         </main>
       </div>
@@ -52,6 +56,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
     crossorigin="anonymous"></script>
+  <script src="./JS/main.js"></script>
 </body>
 
 </html>
