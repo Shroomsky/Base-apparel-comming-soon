@@ -16,29 +16,31 @@
 
 <body>
 
-  <div class="wrapper d-flex flex-column flex-xl-row container-fluid justyfy-content-center">
-    <div class="container col-xl-6 flex-xl-column text-xl-start" id="textContent">
-      <header>
-        <img src="./images/logo.svg" alt="Base Apperel company logo" class="logo">
-        <div class="img container-fluid d-xl-none">
-      <img src="./images/hero-mobile.jpg" alt="Base Apperel model photo">
-    </div>
-        <h1>we're <span>coming soon</span></h1>
-      </header>
-      <main>
-        <p class="pb-4 pt-3">Hello fellow shoppers! We're currently building our new fashion store.
-          Add your email below to stay up-to-date with announcements and our launch deals.</p>
+  <div class="wrapper d-flex align-items-xl-center  justify-content-xl-between">
+    <div class=" d-flex flex-column flex-xl-row container-fluid justyfy-content-center " id="mainContainer">
+      <div class="container-fluid p-0 col-xl-7 flex-xl-column text-xl-start" id="textContent">
+        <header class="ps-xl-5">
+          <img src="./images/logo.svg" alt="Base Apperel company logo" class="ps-4 pt-4 pb-4 ms-xl-0 mt-xl-3 pb-xl-5" >
+          <div class="img container-fluid d-xl-none">
+            <img src="./images/hero-mobile.jpg" alt="Base Apperel model photo">
+          </div>
+          <h1 class="mt-xl-5">we're <span>coming soon</span></h1>
+        </header>
+        <main class="ms-xl-5" id="textForm">
+          <p class="pb-4 pt-3">Hello fellow shoppers! We're currently building our new fashion store.
+            Add your email below to stay up-to-date with announcements and our launch deals.</p>
           <form class="form-floating mb-3">
             <input type="email" class="form-control rounded-pill bg-transparent" id="floatingInput"
-            placeholder="Email Address">
+              placeholder="Email Address">
             <label for="floatingInput">Email Address</label>
             <button class="rounded-pill" id="btn"><img src="./images/icon-arrow.svg" alt=""></button>
             <p class="text-danger ms-4 mt-2 d-none" id="#errorText">Please provide a valid email</p>
-        </form>
-      </main>
-    </div>
-    <div class="container col-6 d-xl-block d-none" id="bigImg">
-      <img src="./images/hero-desktop.jpg" alt="Base Apperel model photo">
+          </form>
+        </main>
+      </div>
+      <div class="container-fluid col-xl-5 d-xl-block d-none" id="bigImg">
+        <img src="./images/hero-desktop.jpg" alt="Base Apperel model photo">
+      </div>
     </div>
   </div>
   <footer class="footer">

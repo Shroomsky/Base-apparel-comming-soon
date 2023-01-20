@@ -86,10 +86,6 @@ button {
 }
 
 header {
-	& .logo {
-		padding: 25px;
-		width: 150px;
-	}
 	& h1 {
 		color: colors.$Desaturated_Red;
 		text-transform: uppercase;
@@ -120,10 +116,10 @@ main {
 		}
 		& #btn {
 			position: absolute;
-			top: -1px;
+			top: 0;
 			right: -1px;
 			width: 80px;
-			height: 60px;
+			height: 58px;
 			background: var(--btn-grad-color);
 			border: none;
 			cursor: pointer;
@@ -134,14 +130,16 @@ main {
 		}
 	}
 }
-#top {
-	background-image: url(../images/bg-pattern-desktop.svg);
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-position: top -40% left -10%;
-}
+
 #desktopImg {
 	display: none;
+}
+#mainContainer {
+	padding: 0;
+	margin: 0;
+}
+#textForm {
+	max-width: 450px;
 }
 //=====================Footer================//
 .footer {
@@ -160,35 +158,35 @@ main {
 			}
 		}
 	}
-	
 }
 //=====================Footer================//
 
 //=====================Media================//
 @media (min-width: 1200px) {
 	.wrapper {
-		max-width: 90vw;
+		max-width: 1440px;
 	}
-	#textContent {
-		padding: 0 50px;
-	}
+
 	header {
 		& h1 {
 			display: block;
 			width: 300px;
 			padding: 0;
-			margin-top: 150px;
 			font-size: 3rem;
 			letter-spacing: 8px;
 		}
-		
 	}
 	main {
 		padding-left: 0;
-		
+	}
+	#bigImg {
+		margin: 0;
+		padding: 0;
 	}
 	#textContent {
-		margin-right: 50px;
+		background-image: url(../images/bg-pattern-desktop.svg);
+		background-size: cover;
+		
 	}
 }
 //=====================Media================//
