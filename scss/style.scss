@@ -1,5 +1,4 @@
 @use "./colors" as colors;
-@use "./mixins" as mixins;
 
 //============CSS Reset==========//
 *,
@@ -52,13 +51,18 @@ ol {
 }
 //============CSS Reset==========//
 
+:root {
+	--btn-grad-color: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+}
+
 body {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
-	font-family: 'Josefin Sans', sans-serif;
-	
+	font-family: "Josefin Sans", sans-serif;
+	background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%)),
+		linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
 }
 a,
 i,
@@ -69,32 +73,76 @@ button {
 		color: #fff;
 	}
 }
-
-//=================Wrapper=============//
 .wrapper {
-	margin-top: 20px;
+	max-width: 375px;
+	padding: 0;
+	text-align: center;
 	flex: 1 0 auto;
-	max-width: 360px;
-	padding: 25px 15px;
-	@include mixins.flex_col_aic;
-	gap: 10px;
 }
 
-//=================Wrapper=============//
+.img {
+	padding: 0;
+	padding-bottom: 20px;
+}
 
-//=================Header=============//
+header {
+	& .logo {
+		padding: 25px;
+		width: 150px;
+	}
+	& h1 {
+		color: colors.$Desaturated_Red;
+		text-transform: uppercase;
+		padding: 0 65px;
+		padding-top: 30px;
+		font-weight: 300;
+		font-size: 2.4rem;
+		letter-spacing: 6px;
+		& span {
+			color: colors.$Dark_Grayish_Red;
+			font-weight: 600;
+		}
+	}
+}
 
-
-//=================Header=============//
-
-//=================Form=============//
-
-
-//=================Error=============//
-
-//=================Error=============//
-//=================Form=============//
-
+main {
+	padding: 10px 20px;
+	color: colors.$Desaturated_Red;
+	& form {
+		& #floatingInput {
+			position: relative;
+			border: 1px solid colors.$Desaturated_Red;
+			opacity: 0.4;
+		}
+		& label {
+			margin-left: 10px;
+			opacity: 0.5;
+		}
+		& #btn {
+			position: absolute;
+			top: -1px;
+			right: -1px;
+			width: 80px;
+			height: 60px;
+			background: var(--btn-grad-color);
+			border: none;
+			cursor: pointer;
+			box-shadow: 0px 20px 10px colors.$Desaturated_Red_semi_transparent;
+			& img {
+				transform: translate(300%);
+			}
+		}
+	}
+}
+#top {
+	background-image: url(../images/bg-pattern-desktop.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: top -40% left -10%;
+}
+#desktopImg {
+	display: none;
+}
 //=====================Footer================//
 .footer {
 	padding: 0.5rem;
@@ -112,10 +160,35 @@ button {
 			}
 		}
 	}
+	
 }
 //=====================Footer================//
 
 //=====================Media================//
-
-
+@media (min-width: 1200px) {
+	.wrapper {
+		max-width: 90vw;
+	}
+	#textContent {
+		padding: 0 50px;
+	}
+	header {
+		& h1 {
+			display: block;
+			width: 300px;
+			padding: 0;
+			margin-top: 150px;
+			font-size: 3rem;
+			letter-spacing: 8px;
+		}
+		
+	}
+	main {
+		padding-left: 0;
+		
+	}
+	#textContent {
+		margin-right: 50px;
+	}
+}
 //=====================Media================//

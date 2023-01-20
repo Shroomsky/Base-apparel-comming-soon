@@ -53,12 +53,17 @@ ol {
   list-style: none;
 }
 
+:root {
+  --btn-grad-color: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+}
+
 body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   font-family: "Josefin Sans", sans-serif;
+  background: linear-gradient(135deg, hsl(0deg, 0%, 100%), hsl(0deg, 100%, 98%)), linear-gradient(135deg, hsl(0deg, 80%, 86%), hsl(0deg, 74%, 74%));
 }
 
 a,
@@ -74,14 +79,72 @@ button :visited {
 }
 
 .wrapper {
-  margin-top: 20px;
+  max-width: 375px;
+  padding: 0;
+  text-align: center;
   flex: 1 0 auto;
-  max-width: 360px;
-  padding: 25px 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
+}
+
+.img {
+  padding: 0;
+  padding-bottom: 20px;
+}
+
+header .logo {
+  padding: 25px;
+  width: 150px;
+}
+header h1 {
+  color: hsl(0deg, 36%, 70%);
+  text-transform: uppercase;
+  padding: 0 65px;
+  padding-top: 30px;
+  font-weight: 300;
+  font-size: 2.4rem;
+  letter-spacing: 6px;
+}
+header h1 span {
+  color: hsl(0deg, 6%, 24%);
+  font-weight: 600;
+}
+
+main {
+  padding: 10px 20px;
+  color: hsl(0deg, 36%, 70%);
+}
+main form #floatingInput {
+  position: relative;
+  border: 1px solid hsl(0deg, 36%, 70%);
+  opacity: 0.4;
+}
+main form label {
+  margin-left: 10px;
+  opacity: 0.5;
+}
+main form #btn {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  width: 80px;
+  height: 60px;
+  background: var(--btn-grad-color);
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 20px 10px hsla(0deg, 36%, 70%, 0.2);
+}
+main form #btn img {
+  transform: translate(300%);
+}
+
+#top {
+  background-image: url(../images/bg-pattern-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top -40% left -10%;
+}
+
+#desktopImg {
+  display: none;
 }
 
 .footer {
@@ -99,4 +162,27 @@ button :visited {
 }
 .footer .attribution a:visited {
   color: #ddd;
+}
+
+@media (min-width: 1200px) {
+  .wrapper {
+    max-width: 90vw;
+  }
+  #textContent {
+    padding: 0 50px;
+  }
+  header h1 {
+    display: block;
+    width: 300px;
+    padding: 0;
+    margin-top: 150px;
+    font-size: 3rem;
+    letter-spacing: 8px;
+  }
+  main {
+    padding-left: 0;
+  }
+  #textContent {
+    margin-right: 50px;
+  }
 }/*# sourceMappingURL=style.css.map */
